@@ -77,28 +77,83 @@
     #editButtons input[type="submit"]{
         font-size: 20px;
     }
-    .faq{
-        display: flex;
-        justify-content: center;
-        margin-top: 30px; 
-        
-        
-       
-   
-    }
-    .faq>.faq-buttons{
-        width: 900px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        margin-top: 0;
-                
-    }
-    .faq>.faq-buttons>.faq-button{
-        flex:1;
-        height: 100%;
-        margin: 0;
-    }
+    .faq {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+    
+  }
+
+  .faq>.faq-buttons {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+    border: 3px solid black;
+    
+  }
+
+  .faq>.faq-buttons>.faq-button {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    margin: 5px;
+    text-align: center;
+    border-right: 3px solid black;
+  }
+  .faq>.faq-buttons>.faq-button:last-child{
+    border-right: none;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .faq>.faq-buttons>.faq-button:hover .dropdown-content {
+    display: block;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content>a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content .inner-dropdown {
+    position: relative;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content .inner-dropdown .inner-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content .inner-dropdown:hover .inner-content {
+    display: block;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content .inner-dropdown .inner-content>a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+    
    
 </style>
 
@@ -184,6 +239,8 @@
         </nav>
         <div class="header_line"></div>
 
+     
+
         <!-- section 1 -->
         <section class="writeForm-container">
         <div class="writeForm">
@@ -196,14 +253,49 @@
         <!-- section 2 -->
         <section>
             <div class="faq">
-            <div class="faq-buttons">
-                <button class="faq-button">주요 질문 1</button>
-                <button class="faq-button">주요 질문 2</button>
-                <button class="faq-button">주요 질문 3</button>
-                <button class="faq-button">주요 질문 4</button>
-                <button class="faq-button">주요 질문 5</button>
-            </div>
-            </div>
+                <div class="faq-buttons">
+                  <div class="faq-button">
+                    주요 질문 1
+                    <div class="dropdown-content">
+                      <a href="">질문 1 내용</a>
+                      <a href="">질문 2 내용</a>
+                      <a href="">질문 3 내용</a>
+                    </div>
+                  </div>
+                  <div class="faq-button">
+                    주요 질문 2
+                    <div class="dropdown-content">
+                      <a href="">질문 4 내용</a>
+                      <a href="">질문 5 내용</a>
+                      <a href="">질문 6 내용</a>
+                    </div>
+                  </div>
+                  <div class="faq-button">
+                    주요 질문 3
+                    <div class="dropdown-content">
+                      <a href="">질문 7 내용</a>
+                      <a href="">질문 8 내용</a>
+                      <a href="">질문 9 내용</a>
+                    </div>
+                  </div>
+                  <div class="faq-button">
+                    주요 질문 4
+                    <div class="dropdown-content">
+                      <a href="">질문 10 내용</a>
+                      <a href="">질문 11 내용</a>
+                      <a href="">질문 12 내용</a>
+                    </div>
+                  </div>
+                  <div class="faq-button">
+                    주요 질문 5
+                    <div class="dropdown-content">
+                      <a href="">질문 13 내용</a>
+                      <a href="">질문 14 내용</a>
+                      <a href="">질문 15 내용</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </section>
 
         <!-- section 3 -->
