@@ -27,6 +27,7 @@
 .section1>aside>.d1>.swiper-wrapper{
     width: 900px;
     border: 1px solid blue;
+    z-index: -1;
 }
 
 .section1>aside>.d1>.swiper-wrapper>.swiper-slide{
