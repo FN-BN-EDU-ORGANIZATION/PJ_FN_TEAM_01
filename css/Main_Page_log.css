@@ -14,54 +14,43 @@
 }
 
 .section1>aside>.d1 {
-    width: 900px;
+    width: auto;
     height: 280px;
-    margin-top: 30px;
-    /* display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center; */
-    border: 3px solid;
+    align-items: center;
 }
 
-.section1>aside>.d1>.swiper-wrapper{
-    width: 900px;
-    border: 1px solid blue;
+.indicator {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.section1>aside>.d1>.swiper-wrapper>.swiper-slide{
-    border: 2px solid;
-    width: 200px;
-    /* display: inline-block; */
+.indicator-item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #bbb;
+    cursor: pointer;
+}
+
+.indicator-item.active {
+    background-color: #3498db;
 }
 
 
-/* 수정중! */
-.section1>aside>.d1>.swiper-wrapper>.swiper-slide>a{
-    display: block;
-    width: 220px;
-    justify-content: space-around;
-    height: 220px;
-    text-decoration: none;
-    text-align: center;
+.section1>aside>.d2 {
+    display: flex;
+    height: 50px;
+    font-size: 1.3rem;
     color: black;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease-in-out;
 }
 
-.section1>aside>.d1>.swiper-wrapper>.swiper-slide>a:hover{
-    transform: scale(1.1);
-}
-
-.section1 > aside > .d1 > .swiper-wrapper>.swiper-slide> a:active,
-.section1 > aside > .d1 > .swiper-wrapper>.swiper-slide> a:focus {
-  transform: scale(1); 
-  transition: transform 0.3s ease-in-out;
-}
-
-
-/* 원본 */
-/* .section1>aside>.d1>.a {
+.section1>aside>.d1>a {
     width: 220px;
     justify-content: space-around;
     height: 220px;
@@ -76,12 +65,11 @@
     transform: scale(1.1);
 }
 
-.section1 > aside > .d1 > a:active,
-.section1 > aside > .d1 > a:focus {
-  transform: scale(1); 
-  transition: transform 0.3s ease-in-out;
-} */
-
+.section1>aside>.d1>a:active,
+.section1>aside>.d1>a:focus {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
 
 .section1>article {
     border: 1px solid lightgray;
@@ -92,25 +80,32 @@
     text-align: center;
     margin: 50px auto;
     font-size: 1.3rem;
-    padding-top: 50px;
+    padding-top: 40px;
     margin-top: 80px;
 }
 
-.section1>article>a:nth-child(1) {
-    text-decoration: none;
+.section1>article>div {
+    height: 100px;
+}
+
+.section1>article>div>a {
     display: block;
-    border: 1px;
-    width: 240px;
+    position: absolute;
+    margin-left: 40px;
+}
+
+.section1>article>div>a>img {
+    width: 60px;
     height: 60px;
-    text-align: center;
-    line-height: 60px;
-    font-size: 2rem;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    background-color: rgb(192, 57, 43);
-    border-radius: 10px;
+}
+
+.section1>article>div>span {
+    display: inline;
+    width: 180px;
+    height: 70px;
+    line-height: 70px;
+    margin-left: 80px;
+
 }
 
 .section1>article>h4 {
@@ -121,23 +116,18 @@
     margin: 15px auto;
 }
 
-.section1>article>a:nth-child(3) {
-    color: black;
-    text-decoration: none;
-    font-size: 1.2rem;
+
+.section1>article>button {
+    width: 70px;
+    height: 25px;
+    background-color: rgb(192, 57, 43);
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 200px;
+    color: white;
+    cursor: pointer;
 }
 
-.section1>article>a:nth-child(5) {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
-}
-
-.section1>article>a:nth-child(6) {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
-}
 
 /* Section2 */
 
@@ -147,7 +137,7 @@
 }
 
 .section2>aside {
-    padding: 20px;
+    padding: 30px;
     margin: 20px 10px;
 }
 
@@ -266,7 +256,7 @@ th {
 }
 
 .section2>article {
-    padding: 20px;
+    padding: 30px;
     margin: 20px 10px;
     color: rgb(192, 57, 43);
     font-weight: 700;
@@ -276,7 +266,6 @@ th {
     width: 450px;
     position: relative;
 }
-
 
 .section2>article>div {
     margin-top: 70px;
