@@ -6,26 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/magazine.css">
+    <!-- 네이버폰트 -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
     <!-- common -->
     <link rel="stylesheet" href="css/common.css">
     <!-- header -->
     <link rel="stylesheet" href="css/header.css">
-    <!-- QnA_Page_Section -->
-    <link rel="stylesheet" href="css/QnA_Write.css">
+    <!-- Main_Page css-->
+    <link rel="stylesheet" href="css/Main_Page.css">
     <!-- footer -->
     <link rel="stylesheet" href="css/footer.css">
+    <!-- mobile_header -->
+    <link rel="stylesheet" href="./css/mobile_header.css" media="all and (max-width:480px)">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
 
-
 <body>
-
     <div class="wrapper">
-        <!-- header -->
-        <!-- top-header -->
+        <!-- 메인 -->
         <header>
             <div class="top-header">
-                <a href="./Main_Page.html"><img class="logo" src="./img/로고.png" alt=""></a>
+                <a href="./Main_Page_log.html"><img class="logo" src="./img/로고.png" alt=""></a>
                 <div class="search_box">
                     <div>SEARCH</div>
                     <input type="text" placeholder="듣고 싶은 노래를 검색하세요!">
@@ -38,16 +41,26 @@
                 </ul>
             </div>
         </header>
-
-        <!-- header nav -->
         <nav>
+            <div class="mobilemenu">
+                <span href="" class="material-symbols-outlined">menu
+                    <ul class="wa">
+                        <li><a href="">수박차트</a></li>
+                        <li><a href="">수박DJ</a></li>
+                        <li><a href="">수박TV</a></li>
+                        <li><a href="">수박매거진</a></li>                        
+                        <li><a href="./QnA_Page.html">공지사항</a></li>                        
+                        <li><a href="">마이페이지</a></li>                        
+                    </ul>
+                </span>    
+            </div>
             <div class="navi">
                 <div class="Menu_left">
                     <ul class="one--depth">
                         <li>
                             <a href="">수박차트</a>
                             <ul class="two--depth">
-                                <li><a href="">국내TOP100</a></li>
+                                <li><a href="./TOP100.html">국내TOP100</a></li>
                                 <li><a href="">해외TOP100</a></li>
                                 <li><a href="">최신음악</a></li>
                                 <li><a href="">장르음악</a></li>
@@ -83,7 +96,7 @@
                             <a href="">공지사항</a>
                             <ul class="two--depth">
                                 <li><a href="">공지사항</a></li>
-                                <li><a href="">QnA</a></li>
+                                <li><a href="./QnA_Page.html">QnA</a></li>
                                 <li><a href="">자주하는질문</a></li>
                             </ul>
                         </li>
@@ -97,54 +110,52 @@
                     </ul>
                 </div>
             </div>
+            
         </nav>
         <div class="header_line"></div>
 
 
 
-        <!-- section 2 -->
-        <section class="sec_2">
-            <div class="QnA_title">
-                <div id="QnA">QnA</div>
-                <div class="dropdown">
-                    <button class="dropbtn">&nbsp;카테고리<img src="./img/drop.svg" alt=""></button>
-                    <div class="drop_content">
-                        <a href="">서비스문의/오류</a>
-                        <a href="">결제/해지/환불</a>
-                        <a href="">이벤트문의</a>
-                        <a href="">이용권 사용문의</a>
-                        <a href="">회원정보</a>
-                        <a href="">기타</a>
-
-                    </div>
-                </div>
+        <main>
+            <div class="magazineTop">
+                <h1>오늘의 매거진</h1>
             </div>
-            <table class="QnA_l">
-                <!-- QnA 목록 테이블 -->
-            </table>
-            
-            <!-- 글 작성 폼 -->
-            <div id="writeForm" style="display: none;">
-                <h2>작성글</h2>
-                <form>
-                    <label for="title">제목</label>
-                    <input type="text" id="title" name="title">
-                    <label for="content">내용</label>
-                    <textarea id="content" name="content" style="height: 300px;"></textarea>
-                    
-                </form>
+        
+            <div class="magazineContent">
+                <div class="date">2023.07.17</div>
+                <img src="./img/song1.webp" alt="이미지 1" class="magazineimage">
+                <h2>제목</h2>
+                <p>하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하</p>
             </div>
-            <div class="btn_write">
-                    <input type="button" value="작성" onclick="location.href='QnA_Page.html'">
-                    <input type="button" value="수정">
-                    <input type="button" value="삭제">
+        
+            <div class="magazineContent">
+                <div class="date">2023.07.17</div>
+                <img src="./img/song2.jpg" alt="이미지 1" class="magazineimage">
+                <h2>제목</h2>
+                <p>하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하</p>
             </div>
-            
-        </section>
+            <div class="magazineContent">
+                <div class="date">2023.07.17</div>
+                <img src="./img/song3.jpg" alt="이미지 1" class="magazineimage">
+                <h2>제목</h2>
+                <p>하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하</p>
+            </div>
+        
+            <div class="magazineContent">
+                <div class="date">2023.07.17</div>
+                <img src="./img/song4.jpg" alt="이미지 1" class="magazineimage">
+                <h2>제목</h2>
+                <p>하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하하</p>
+            </div>
+        
+            <div class="magazineDown">
+                &copy; 2023 오늘의 매거진. All rights reserved.
+            </div>
+        </main>
 
 
 
-        <!-- footer -->
+
         <footer>
             <div class="footer_line"></div>
             <div>
@@ -169,59 +180,6 @@
 
         </footer>
     </div>
-
-    <script>
-        function toggleWriteForm() {
-            var writeForm = document.getElementById("writeForm");
-            if (writeForm.style.display === "none") {
-                writeForm.style.display = "block";
-            } else {
-                writeForm.style.display = "none";
-            }
-        }
-
-        // 텍스트 입력창 토글 함수 호출
-        document.querySelector('.btn_write input[type="button"]').addEventListener('click', toggleWriteForm);
-
-        // 페이지 로드 시 Write form을 보이도록 설정
-        window.addEventListener('DOMContentLoaded', function () {
-            var writeForm = document.getElementById("writeForm");
-            writeForm.style.display = "block";
-        });
-
-    </script>
-       <script>
-        // 작성 버튼 클릭 시 동작
-        document.querySelector('.btn_write input[type="button"]').addEventListener('click', function () {
-            var writePage = document.getElementById("writePage");
-            writePage.style.display = "block";
-            // 이전 페이지 숨기기
-            var sec2 = document.querySelector('.sec_2');
-            sec2.style.display = "none";
-
-            // 수정 및 삭제 버튼 위치 변경
-            var btnWrite = document.querySelector('.btn_write input[type="button"]');
-            var btnUpdate = document.createElement('input');
-            btnUpdate.setAttribute('type', 'button');
-            btnUpdate.setAttribute('value', '수정');
-            btnUpdate.setAttribute('id', 'btn_update');
-            btnUpdate.addEventListener('click', function () {
-                // 수정 버튼 클릭 시 동작
-            });
-            btnWrite.parentElement.insertBefore(btnUpdate, btnWrite);
-
-            var btnDelete = document.createElement('input');
-            btnDelete.setAttribute('type', 'button');
-            btnDelete.setAttribute('value', '삭제');
-            btnDelete.setAttribute('id', 'btn_delete');
-            btnDelete.addEventListener('click', function () {
-                // 삭제 버튼 클릭 시 동작
-            });
-            btnWrite.parentElement.insertBefore(btnDelete, btnWrite);
-        });
-    </script>
-
-    
 </body>
 
 </html>

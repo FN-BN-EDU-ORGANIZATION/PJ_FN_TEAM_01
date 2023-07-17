@@ -18,7 +18,7 @@ li{
     }
 
     .join>ul {
-        padding: 40px 0 10px;
+        padding-top: 40px;
     }
     
     .join>ul li {
@@ -57,10 +57,10 @@ li{
     }
 
     .join #idcheck_btn, #addr_btn{
-        width: 82px;
+        width: 85px;
         height: 40px;
         margin-left: 15px;
-        margin-right: 0px;
+        margin-right: -3px;
         font-size: 18px;
         cursor: pointer;
     }

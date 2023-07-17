@@ -17,22 +17,15 @@
     width: 900px;
     height: 280px;
     margin-top: 30px;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center; */
-    border: 3px solid;
 }
 
 .section1>aside>.d1>.swiper-wrapper{
     width: 900px;
-    border: 1px solid blue;
 }
 
 .section1>aside>.d1>.swiper-wrapper>.swiper-slide{
-    border: 2px solid;
     width: 200px;
-    /* display: inline-block; */
+    margin-left: -2px;
 }
 
 
@@ -47,10 +40,11 @@
     color: black;
     font-size: 1.2rem;
     transition: transform 0.3s ease-in-out;
+    
 }
 
 .section1>aside>.d1>.swiper-wrapper>.swiper-slide>a:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .section1 > aside > .d1 > .swiper-wrapper>.swiper-slide> a:active,
@@ -59,29 +53,10 @@
   transition: transform 0.3s ease-in-out;
 }
 
-
-/* 원본 */
-/* .section1>aside>.d1>.a {
-    width: 220px;
-    justify-content: space-around;
-    height: 220px;
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease-in-out;
+.section1>aside>.d1>.swiper-wrapper>.swiper-slide>a>img{
+    border: 1px solid;
+    
 }
-
-.section1>aside>.d1>a:hover {
-    transform: scale(1.1);
-}
-
-.section1 > aside > .d1 > a:active,
-.section1 > aside > .d1 > a:focus {
-  transform: scale(1); 
-  transition: transform 0.3s ease-in-out;
-} */
-
 
 .section1>article {
     border: 1px solid lightgray;
