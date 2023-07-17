@@ -1,0 +1,134 @@
+#writeForm input[type="text"],
+#writeForm textarea {
+    width: 200%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+
+#writeForm label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn_write {
+    position: absolute;
+    bottom: 0px;
+    right: 200px;
+    z-index: 9999;
+}
+
+#writeForm h2 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#writeForm form {
+    margin-top: 20px;
+}
+
+#writeForm input[type="text"],
+#writeForm textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+
+
+#writeForm label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#writeForm input[type="submit"] {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#writeForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.dropbtn {
+
+    margin-left: 880px;
+}
+.drop_content{
+    margin-left: 880px;
+}
+.sec_3>.QnA_title>.dropdown{
+    margin: 50px 50px 0 0;
+}
+
+.wrapper>.sec_3>.QnA_title>.dropdown>.dropbtn{
+    width: 180px;
+    height: 32px;
+    border-radius: 3px;
+    background-color: rgb(240, 240, 240);
+    font-size: 17px;
+    text-align: left;
+    position: relative;
+}
+
+.wrapper>.sec_3>.QnA_title>.dropdown>.dropbtn>img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    transition: 0.5s;
+}
+
+.wrapper>.sec_3>.QnA_title>.dropdown>.drop_content{
+    margin-top: -3px;
+}
+
+.wrapper>.sec_3>.QnA_title>.dropdown>.drop_content>a{
+    border: 1px solid gray;
+    background-color: rgb(240, 240, 240);
+    border-radius: 3px;
+    width: 178px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    padding-left: 12px;
+    text-align: left;
+    display:none;
+}    
+
+/* 드랍박스 효과 */
+.wrapper>.sec_3>.QnA_title>.dropdown>.dropbtn:focus img{
+    transform: rotate(180deg);
+}
+
+.wrapper>.sec_3>.QnA_title>.dropdown>.dropbtn:focus+.drop_content {
+    position: absolute;
+}
+
+.wrapper>.sec_3>.QnA_title>.dropdown>.dropbtn:focus+.drop_content>a {
+    display: block;
+    margin: 0 2px;
+}
+
+.wrapper>.sec_3>.QnA_title>.dropdown>.drop_content>a:hover {
+    background-color: rgb(218, 218, 218);
+}
+

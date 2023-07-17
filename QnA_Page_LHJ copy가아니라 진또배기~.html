@@ -12,25 +12,20 @@
     <link rel="stylesheet" href="css/common.css">
     <!-- header -->
     <link rel="stylesheet" href="css/header.css">
-    <!-- QnA_Page_Section -->   
-    <link rel="stylesheet" href="css/QnA_Page_Section.css">
+    <!-- QnA_Page_Section -->
+    <link rel="stylesheet" href="css/QnAcopy.css">
     <!-- footer -->
     <link rel="stylesheet" href="css/footer.css">
-    <style>
-        .btn_write {
-            position: absolute;
-            bottom: 40px;
-            right: 150px;
-            z-index: 9999;
-        }
-    </style>
+    <link rel="stylesheet" href="css/드롭버튼,내용작성박스.css">
+    <link rel="stylesheet" href="/css/하나만들자.css">
+
 </head>
 
 
 <body>
-    
+
     <div class="wrapper">
-    <!-- header -->
+        <!-- header -->
         <!-- top-header -->
         <header>
             <div class="top-header">
@@ -109,18 +104,22 @@
         </nav>
         <div class="header_line"></div>
 
-  
+
 
         <!-- section 2 -->
         <section class="sec_2">
             <div class="QnA_title">
                 <div id="QnA">QnA</div>
                 <div class="dropdown">
-                   
+                    <button class="dropbtn">&nbsp;카테고리<img src="./img/drop.svg" alt=""></button>
                     <div class="drop_content">
-                        <a href="">최신 순</a>
-                        <a href="">오래된 순</a>
-                        <a href="">많이 읽힌 순</a>
+                        <a href="">서비스문의/오류</a>
+                        <a href="">결제/해지/환불</a>
+                        <a href="">이벤트문의</a>
+                        <a href="">이용권 사용문의</a>
+                        <a href="">회원정보</a>
+                        <a href="">기타</a>
+
                     </div>
                 </div>
             </div>
@@ -128,24 +127,27 @@
                 <!-- QnA 목록 테이블 -->
             </table>
             <div class="btn_write">
-                <input type="button" value="글쓰기"  onclick="toggleWriteForm()">
+                    <input type="button" value="작성">
+                    <input type="button" value="수정">
+                    <input type="button" value="삭제">
             </div>
-
+          
             <!-- 글 작성 폼 -->
             <div id="writeForm" style="display: none;">
-                <h2>글 작성</h2>
+                <h2>작성글</h2>
                 <form>
                     <label for="title">제목</label>
                     <input type="text" id="title" name="title">
                     <label for="content">내용</label>
-                    <textarea id="content" name="content"></textarea>
-                    <input type="submit" value="작성">
+                    <textarea id="content" name="content" style="height: 300px;"></textarea>
+
                 </form>
             </div>
 
         </section>
 
-     
+
+
         <!-- footer -->
         <footer>
             <div class="footer_line"></div>
@@ -168,21 +170,62 @@
                 <span>문의전화 : 1544-1111 (평일 09:00-18:00)</span>
                 <span>WATERMELON MUSIC으로 음악과 함께하는 즐거운 하루 보내세요!</span>
             </div>
-            
+
         </footer>
     </div>
 
-        <!-- JavaScript -->
-        <script>
-            function toggleWriteForm() {
-                var writeForm = document.getElementById("writeForm");
-                if (writeForm.style.display === "none") {
-                    writeForm.style.display = "block";
-                } else {
-                    writeForm.style.display = "none";
-                }
+    <script>
+        function toggleWriteForm() {
+            var writeForm = document.getElementById("writeForm");
+            if (writeForm.style.display === "none") {
+                writeForm.style.display = "block";
+            } else {
+                writeForm.style.display = "none";
             }
-        </script>
+        }
 
+        // 텍스트 입력창 토글 함수 호출
+        document.querySelector('.btn_write input[type="button"]').addEventListener('click', toggleWriteForm);
+
+        // 페이지 로드 시 Write form을 보이도록 설정
+        window.addEventListener('DOMContentLoaded', function () {
+            var writeForm = document.getElementById("writeForm");
+            writeForm.style.display = "block";
+        });
+
+    </script>
+       <script>
+        // 작성 버튼 클릭 시 동작
+        document.querySelector('.btn_write input[type="button"]').addEventListener('click', function () {
+            var writePage = document.getElementById("writePage");
+            writePage.style.display = "block";
+            // 이전 페이지 숨기기
+            var sec2 = document.querySelector('.sec_2');
+            sec2.style.display = "none";
+
+            // 수정 및 삭제 버튼 위치 변경
+            var btnWrite = document.querySelector('.btn_write input[type="button"]');
+            var btnUpdate = document.createElement('input');
+            btnUpdate.setAttribute('type', 'button');
+            btnUpdate.setAttribute('value', '수정');
+            btnUpdate.setAttribute('id', 'btn_update');
+            btnUpdate.addEventListener('click', function () {
+                // 수정 버튼 클릭 시 동작
+            });
+            btnWrite.parentElement.insertBefore(btnUpdate, btnWrite);
+
+            var btnDelete = document.createElement('input');
+            btnDelete.setAttribute('type', 'button');
+            btnDelete.setAttribute('value', '삭제');
+            btnDelete.setAttribute('id', 'btn_delete');
+            btnDelete.addEventListener('click', function () {
+                // 삭제 버튼 클릭 시 동작
+            });
+            btnWrite.parentElement.insertBefore(btnDelete, btnWrite);
+        });
+    </script>
+
+    
 </body>
+
 </html>

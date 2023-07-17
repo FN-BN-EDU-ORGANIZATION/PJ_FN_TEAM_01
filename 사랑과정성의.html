@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 네이버폰트 -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <!-- common -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- header -->
+    <link rel="stylesheet" href="css/header.css">
+    <!-- QnA_Page_Section -->
+    <link rel="stylesheet" href="css/QnA_Page_Section.css">
+    <!-- footer -->
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<style>
+
+    .writeForm{
+        display: flex;
+        margin-top: 50px;
+        margin-right: 50px;
+        border-radius: 7px;
+        justify-content: center;                       
+    }
+    .title{
+        display: inline-block;
+        width : 100px;
+        height : 50px;
+        font-size : 30px;
+        border: 3px solid rgb(92, 115, 6);
+        border-radius: 7px 0px 0px 7px;
+        margin-right: -8px;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        line-height: 45px;
+        background-color: red;
+    }
+    .titlesub{
+        width : 400px;
+        height : 50px;
+        border: 3px solid rgb(92, 115, 6);
+        font-size : 20px;
+        border-radius: 0px 7px 7px 0px;
+        padding-left: 10px;
+        background-color: greenyellow
+       
+               
+    }
+    .contentarea{
+        margin-top: 0;
+        justify-content: center;
+        display: flex;
+       
+    
+    }
+   
+    #content{
+        width : 900px;
+        height : 700px;
+        font-size: 20px;
+        overflow-y: auto;
+        border: 3px solid gray;
+        margin-bottom: 0;
+    
+    }
+    #editButtons{
+        margin-top: 20px;
+        text-align: right;
+        margin-bottom: 100px;
+    }
+    #editButtons input[type="submit"]{
+        font-size: 20px;
+    }
+    .faq {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+    
+  }
+
+  .faq>.faq-buttons {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+    border: 3px solid black;
+    
+  }
+
+  .faq>.faq-buttons>.faq-button {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    margin: 5px;
+    text-align: center;
+    border-right: 3px solid black;
+  }
+  .faq>.faq-buttons>.faq-button:last-child{
+    border-right: none;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .faq>.faq-buttons>.faq-button:hover .dropdown-content {
+    display: block;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content>a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content .inner-dropdown {
+    position: relative;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content .inner-dropdown .inner-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content .inner-dropdown:hover .inner-content {
+    display: block;
+  }
+
+  .faq>.faq-buttons>.faq-button>.dropdown-content .inner-dropdown .inner-content>a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+    
+   
+</style>
+
+<body>
+    
+    <div class="wrapper">
+    <!-- header -->
+        <!-- top-header -->
+        <header>
+            <div class="top-header">
+                <a href="./Main_Page.html"><img class="logo" src="./img/로고.png" alt=""></a>
+                <div class="search_box">
+                    <div>SEARCH</div>
+                    <input type="text" placeholder="듣고 싶은 노래를 검색하세요!">
+                    <a href=""><img src="./img/search.svg" alt=""></a>
+                </div>
+                <ul>
+                    <li><a href="" style="color:rgb(92, 115, 6); font-family: 'NanumSquareAceb';"><img
+                                src="./img/add.svg" alt=""> 멤버십가입</a></li>
+                    <li><a href=""><img src="./img/english.svg" alt="">ENGLISH</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- header nav -->
+        <nav>
+            <div class="navi">
+                <div class="Menu_left">
+                    <ul class="one--depth">
+                        <li>
+                            <a href="">수박차트</a>
+                            <ul class="two--depth">
+                                <li><a href="">국내TOP100</a></li>
+                                <li><a href="">해외TOP100</a></li>
+                                <li><a href="">최신음악</a></li>
+                                <li><a href="">장르음악</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박DJ</a>
+                            <ul class="two--depth">
+                                <li><a href="">#투데이</a></li>
+                                <li><a href="">테마장르</a></li>
+                                <li><a href="">인기선곡</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박TV</a>
+                            <ul class="two--depth">
+                                <li><a href="">뮤직비디오</a></li>
+                                <li><a href="">수박방송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박매거진</a>
+                            <ul class="two--depth">
+                                <li><a href="">오늘의매거진</a></li>
+                                <li><a href="">완결매거진</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Menu_right">
+                    <ul class="one--depth">
+                        <li>
+                            <a href="">공지사항</a>
+                            <ul class="two--depth">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">QnA</a></li>
+                                <li><a href="">자주하는질문</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">마이페이지</a>
+                            <ul class="two--depth">
+                                <li><a href="">정보수정</a></li>
+                                <li><a href="">마이리스트</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="header_line"></div>
+
+     
+
+        <!-- section 1 -->
+        <section class="writeForm-container">
+        <div class="writeForm">
+            <div class="title">제목</div>
+            <input type="text" class="titlesub">
+        </div>
+        
+        </section>
+
+        <!-- section 2 -->
+        <section>
+            <div class="faq">
+                <div class="faq-buttons">
+                  <div class="faq-button">
+                    주요 질문 1
+                    <div class="dropdown-content">
+                      <a href="">질문 1 내용</a>
+                      <a href="">질문 2 내용</a>
+                      <a href="">질문 3 내용</a>
+                    </div>
+                  </div>
+                  <div class="faq-button">
+                    주요 질문 2
+                    <div class="dropdown-content">
+                      <a href="">질문 4 내용</a>
+                      <a href="">질문 5 내용</a>
+                      <a href="">질문 6 내용</a>
+                    </div>
+                  </div>
+                  <div class="faq-button">
+                    주요 질문 3
+                    <div class="dropdown-content">
+                      <a href="">질문 7 내용</a>
+                      <a href="">질문 8 내용</a>
+                      <a href="">질문 9 내용</a>
+                    </div>
+                  </div>
+                  <div class="faq-button">
+                    주요 질문 4
+                    <div class="dropdown-content">
+                      <a href="">질문 10 내용</a>
+                      <a href="">질문 11 내용</a>
+                      <a href="">질문 12 내용</a>
+                    </div>
+                  </div>
+                  <div class="faq-button">
+                    주요 질문 5
+                    <div class="dropdown-content">
+                      <a href="">질문 13 내용</a>
+                      <a href="">질문 14 내용</a>
+                      <a href="">질문 15 내용</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+        <!-- section 3 -->
+        <section class="contentarea">
+            <div>           
+            <textarea name="content" id="content" cols="10" rows="10"></textarea>
+            <br>
+            
+            <div id="editButtons">
+                <input type="submit" value="수정">
+                <input type="submit" value="삭제">
+            </div>
+            </div>
+        </section>
+
+        
+
+        <!-- footer -->
+        <footer>
+            <div class="footer_line"></div>
+            <div>
+                <ul class="footer_menu">
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a href="">제휴/프로모션</a></li>
+                    <li><a href=""> 개인정보처리방침</a></li>
+                </ul>
+            </div>
+            <p></p>
+            <div class="Site_info">
+                <img id="footer_logo" src="./img/로고.png" alt="">
+                <span class="Sitename">(주)WATERMELON MUSIC</span>
+                <span>대구광역시 중구 중앙대로 366 반월센트럴타워 10층</span>
+                <span>대표이사 : 윤치연, 김예솔, 이헌지</span>
+                <span>사업자등록번호 : 024-04-02023</span>
+                <br>
+                <span>문의전화 : 1544-1111 (평일 09:00-18:00)</span>
+                <span>WATERMELON MUSIC으로 음악과 함께하는 즐거운 하루 보내세요!</span>
+            </div>
+            
+        </footer>
+    </div>
+</body>
+</html>
