@@ -10,11 +10,13 @@
     font-weight: 700;
     width: 900px;
     font-size: 2.5rem;
+    margin-top: 15px;
 }
 
 .section1>aside>.d1 {
     width: auto;
     height: 280px;
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
