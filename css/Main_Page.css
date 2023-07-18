@@ -28,8 +28,6 @@
     margin-left: -2px;
 }
 
-
-/* 수정중! */
 .section1>aside>.d1>.swiper-wrapper>.swiper-slide>a{
     display: block;
     width: 220px;
@@ -54,8 +52,9 @@
 }
 
 .section1>aside>.d1>.swiper-wrapper>.swiper-slide>a>img{
-    border: 1px solid;
-    
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
 }
 
 .section1>article {
